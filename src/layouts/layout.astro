@@ -1,0 +1,128 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+}
+const { title = "somekling" } = Astro.props;
+---
+
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <style>
+        /* Custom scrollbar matching steel aesthetic */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+    </style>
+</head>
+<body class="bg-[#09090b] text-[#e4e4e7] font-sans antialiased overflow-x-hidden selection:bg-accent-blue/30 selection:text-white">
+    
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#09090b]/80 backdrop-blur-md border-b border-zinc-900 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- Minimal Logo -->
+            <a href="#" class="flex items-center space-x-2.5 group">
+                <span class="text-lg font-medium tracking-tight text-white">
+                    some<span class="text-zinc-400 group-hover:text-white transition-colors duration-300">kling</span>
+                </span>
+                <span class="text-[10px] uppercase tracking-widest font-mono text-zinc-600 border border-zinc-800 px-1.5 py-0.5 rounded">Consulting</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#capabilities" class="text-xs tracking-wide font-medium text-zinc-400 hover:text-white transition-colors">Capabilities</a>
+                <a href="#provenance" class="text-xs tracking-wide font-medium text-zinc-400 hover:text-white transition-colors">Provenance</a>
+                <a href="#contact" class="px-3.5 py-1.5 rounded-full border border-zinc-800 text-xs font-medium text-white hover:bg-zinc-900 hover:border-zinc-700 transition-all">Get in touch</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-400 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-6 bg-[#09090b] border-b border-zinc-900 space-y-3">
+            <a href="#capabilities" class="block py-2 text-xs tracking-wide text-zinc-400 hover:text-white transition-all">Capabilities</a>
+            <a href="#provenance" class="block py-2 text-xs tracking-wide text-zinc-400 hover:text-white transition-all">Provenance</a>
+            <a href="#contact" class="block py-2.5 text-center rounded-lg border border-zinc-800 text-xs font-medium text-white hover:bg-zinc-900 transition-all">Get in touch</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+     <main">
+         <slot />
+     </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#09090b] border-t border-zinc-900 py-12 relative">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="space-y-1 text-center sm:text-left">
+                <p class="text-xs font-medium text-white">somekling</p>
+                <p class="text-[10px] text-zinc-600 font-mono">Premium Integrations &amp; Platform Architectures. Built safely.</p>
+            </div>
+
+            <div class="space-y-2 text-center sm:text-right">
+                <p class="text-[10px] text-zinc-500 font-mono">© <span id="current-year">2026</span> somekling. All rights reserved.</p>
+                <div class="flex items-center justify-center sm:justify-end space-x-4 text-[10px] font-mono text-zinc-500">
+                    <a href="#capabilities" class="hover:text-white transition-colors">Capabilities</a>
+                    <span>·</span>
+                    <a href="#provenance" class="hover:text-white transition-colors">Provenance</a>
+                    <span>·</span>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts section -->
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggling
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body></html>

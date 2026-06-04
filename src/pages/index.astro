@@ -1,17 +1,244 @@
 ---
+import Layout from '../layouts/Layout.astro';
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="somekling - Systems Architecture & CX Strategy">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 md:pt-48 md:pb-36 overflow-hidden">
+        <!-- Subtle linear layout lines -->
+        <div class="absolute inset-0 flex justify-between pointer-events-none max-w-6xl mx-auto px-6 opacity-5">
+            <div class="w-px bg-white h-full"></div>
+            <div class="w-px bg-white h-full hidden md:block"></div>
+            <div class="w-px bg-white h-full"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl space-y-10">
+                <!-- Understated tag -->
+                <div class="inline-flex items-center space-x-2 text-zinc-500 text-xs font-mono uppercase tracking-widest">
+                    <span>Systems Architecture</span>
+                    <span>/</span>
+                    <span>CX Strategy</span>
+                </div>
+
+                <!-- Titanium-style clean heading -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-zinc-100 leading-[1.05]">
+                    We construct <br class="hidden sm:inline">
+                    <span class="text-white font-medium">uncompromising integrations</span> <br>
+                    for enterprise platforms.
+                </h1>
+
+                <!-- Crisp, high-contrast description -->
+                <p class="text-base sm:text-lg text-zinc-400 font-light max-w-xl leading-relaxed">
+                    Custom Genesys Cloud applications, robust Zendesk configurations, and custom WooCommerce engines. Architectural precision with zero unnecessary overhead.
+                </p>
+
+                <!-- Action links -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                    <a href="#contact" class="px-6 py-3 rounded-md bg-white text-[#09090b] text-xs font-semibold hover:bg-zinc-200 transition-all text-center">
+                        Contact Kling
+                    </a>
+                    <a href="#capabilities" class="px-6 py-3 rounded-md border border-zinc-800 text-zinc-300 text-xs font-semibold hover:border-zinc-700 hover:text-white transition-all text-center">
+                        Explore Capabilities
+                    </a>
+                </div>
+
+                <!-- Minimal Ecosystem Tags -->
+                <div class="pt-8 border-t border-zinc-900 space-y-3">
+                    <p class="text-[10px] font-mono uppercase tracking-wider text-zinc-500">Core Integrations &amp; Platforms</p>
+                    <div class="flex flex-wrap gap-x-6 gap-y-3 text-xs text-zinc-400">
+                        <span>• Genesys AppFoundry Widgets</span>
+                        <span>• Zendesk Marketplace Integration</span>
+                        <span>• Google Workspace Ecosystems</span>
+                </div>
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Capabilities / Services Section -->
+    <section id="capabilities" class="py-24 bg-[#0d0d10] border-y border-zinc-900 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16 items-baseline">
+                <div class="lg:col-span-4">
+                    <h2 class="text-xs uppercase tracking-widest font-mono text-zinc-500">Capabilities</h2>
+                </div>
+                <div class="lg:col-span-8 space-y-4">
+                    <p class="text-2xl sm:text-3xl font-light text-white tracking-tight">Systems designed for high reliability and scale.</p>
+                    <p class="text-zinc-400 font-light text-sm sm:text-base max-w-xl leading-relaxed">
+                        We build high-performance workplace widgets, automated logic pipelines, and clean customer storefront integrations that seamlessly sync operations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Monochromatic grid with zero flashiness, high clarity -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-zinc-900 border border-zinc-900 overflow-hidden rounded-lg">
+                
+                <!-- Service 1: Genesys -->
+                <div class="bg-[#121215] p-8 space-y-6 flex flex-col justify-between hover:bg-[#151519] transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-mono text-zinc-500">GENESYS CLOUD</span>
+                        <h3 class="text-lg font-medium text-white">Platform Consulting</h3>
+                        <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                            Bespoke interaction routing architecture, complex Architect call/chat flows, optimized Data Actions, and webhook triggers designed to safely scale interaction volume.
+                        </p>
+                    </div>
+                    <div class="text-[11px] font-mono text-zinc-600">Architect / Data Actions / Webhooks</div>
+                </div>
+
+                <!-- Service 2: Zendesk CX -->
+                <div class="bg-[#121215] p-8 space-y-6 flex flex-col justify-between hover:bg-[#151519] transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-mono text-zinc-500">ZENDESK</span>
+                        <h3 class="text-lg font-medium text-white">Optimized Workflows</h3>
+                        <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                            Complete ticket routing structural optimization, trigger audits, advanced automation design, and Guide custom UI development for a clean ticketing pipeline.
+                        </p>
+                    </div>
+                    <div class="text-[11px] font-mono text-zinc-600">Triggers / Automations / Routing</div>
+                </div>
+
+                <!-- Service 3: Custom Apps & Marketplace -->
+                <div class="bg-[#121215] p-8 space-y-6 flex flex-col justify-between hover:bg-[#151519] transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-mono text-zinc-500">APP WIDGETS</span>
+                        <h3 class="text-lg font-medium text-white">Sidebar Widgets</h3>
+                        <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                            Custom workspace widgets designed for both Genesys AppFoundry and Zendesk App Marketplace. Embed legacy internal data models directly where your agents need them.
+                        </p>
+                    </div>
+                    <div class="text-[11px] font-mono text-zinc-600">AppFoundry / Zendesk Apps / SDKs</div>
+                </div>
+
+                <!-- Service 4: Platform-Agnostic E-Commerce -->
+                <div class="bg-[#121215] p-8 space-y-6 flex flex-col justify-between hover:bg-[#151519] transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-mono text-zinc-500">E-COMMERCE</span>
+                        <h3 class="text-lg font-medium text-white">Platform Solutions</h3>
+                        <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                            Clean, lightweight digital store setups. Expert optimization and custom logic mapping for Shopify, BigCommerce, or robust WooCommerce and WordPress instances.
+                        </p>
+                    </div>
+                    <div class="text-[11px] font-mono text-zinc-600">Shopify / BigCommerce / WooCommerce</div>
+                </div>
+
+                <!-- Service 5: Systems Sync -->
+                <div class="bg-[#121215] p-8 space-y-6 flex flex-col justify-between hover:bg-[#151519] transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-mono text-zinc-500">MIDWARE DEV</span>
+                        <h3 class="text-lg font-medium text-white">Synchronous Middleware</h3>
+                        <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                            Low-latency serverless routes built to link transactional webstores with support centers. Synchronize billing, user status, and client histories securely in real time.
+                        </p>
+                    </div>
+                    <div class="text-[11px] font-mono text-zinc-600">Serverless API / JWT Sync / Node.js</div>
+                </div>
+
+                <!-- Service 6: Performance Engineering -->
+                <div class="bg-[#121215] p-8 space-y-6 flex flex-col justify-between hover:bg-[#151519] transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-mono text-zinc-500">GOOGLE APPS SCRIPT</span>
+                        <h3 class="text-lg font-medium text-white">Lightweight Automation</h3>
+                        <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                            Cost-effective data synchronizations, background triggers, custom Google Sheets macro-apps, and instant API reporting pipelines using serverless script infrastructure.
+                        </p>
+                    </div>
+                    <div class="text-[11px] font-mono text-zinc-600">Apps Script / Sheets / Workspace APIs</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Provenance / Founder Section -->
+    <section id="provenance" class="py-24 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="border border-zinc-900 bg-[#0c0c0e] rounded-xl p-8 sm:p-12 lg:p-16 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Text Side -->
+                    <div class="lg:col-span-8 space-y-8">
+                        <span class="text-xs uppercase tracking-widest font-mono text-zinc-500">Provenance</span>
+                        
+                        <h2 class="text-3xl sm:text-4xl font-light tracking-tight text-white leading-tight mt-8">
+                            Led by actual enterprise credentials.
+                        </h2>
+                        
+                        <div class="space-y-6 text-zinc-400 font-light text-sm sm:text-base leading-relaxed">
+                            <p>
+                                I am <span class="text-white font-medium">Samuel Kling</span>. Alongside my independent consulting work, I actively direct systems architecture and lead a high-performing team of solution engineers and system owners for one of the largest online travel agencies in the world.
+                            </p>
+                            <p>
+                                My primary responsibility involves managing, engineering, and safeguarding a critical digital ecosystem consisting of Zendesk, Genesys Cloud, and numerous proprietary internal tools handling millions of customer touches globally.
+                            </p>
+                            <p>
+                                This is not theoretical consulting. Your platform architecture is designed and analyzed through the lens of strict uptime, safety parameters, and enterprise-grade resilience.
+                            </p>
+                        </div>
+
+                        <!-- Highlights -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-zinc-900">
+                            <div class="flex items-start space-x-3 text-zinc-300">
+                                <span class="text-xs font-light leading-relaxed">• Direct founder engagement. No sales agents or mid-level buffers.</span>
+                            </div>
+                            <div class="flex items-start space-x-3 text-zinc-300">
+                                <span class="text-xs font-light leading-relaxed">• Decades of combined architecture mapping experience.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monochromatic Stat Panels (Brushed Slate Look) -->
+                    <div class="lg:col-span-4 w-full space-y-3">
+                        <div class="bg-[#121215] border border-zinc-900 rounded-lg p-6">
+                            <span class="text-[10px] uppercase font-mono tracking-widest text-zinc-500 block mb-1">Scale Under Management</span>
+                            <span class="text-2xl font-light text-white tracking-tight">Enterprise Portfolio</span>
+                            <span class="text-xs text-zinc-400 block mt-1">Multi-million interaction systems.</span>
+                        </div>
+                        <div class="bg-[#121215] border border-zinc-900 rounded-lg p-6">
+                            <span class="text-[10px] uppercase font-mono tracking-widest text-zinc-500 block mb-1">Architecture Standard</span>
+                            <span class="text-2xl font-light text-white tracking-tight">Clean Codebases</span>
+                            <span class="text-xs text-zinc-400 block mt-1">Sparsely engineered, custom structures designed for longevity without unnecessary dependency overhead.</span>
+                        </div>
+                        <div class="bg-[#121215] border border-zinc-900 rounded-lg p-6">
+                            <span class="text-[10px] uppercase font-mono tracking-widest text-zinc-500 block mb-1">Consulting Model</span>
+                            <span class="text-2xl font-light text-white tracking-tight">Direct Architect Access</span>
+                            <span class="text-xs text-zinc-400 block mt-1">You work directly with the systems architect. Absolute technical alignment without agency middle managers.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-[#0d0d10] border-t border-zinc-900 relative">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto space-y-8 py-12">
+                <span class="text-xs uppercase tracking-widest font-mono text-zinc-500">Contact</span>
+                
+                <h2 class="text-4xl sm:text-5xl font-light tracking-tight text-white leading-tight mt-8">
+                    Let's build something <span class="font-medium text-white">resilient</span>.
+                </h2>
+                
+                <p class="text-base text-zinc-400 font-light max-w-xl mx-auto leading-relaxed">
+                    To maintain strict focus and delivery standards, somekling accepts a selective portfolio of projects each quarter. Get in touch directly to discuss your integration objectives or schedule an architectural review.
+                </p>
+
+                <!-- High-contrast Elegant Mailto Link -->
+                <div class="pt-6">
+                    <a href="mailto:hello@somekling.com" class="inline-block group">
+                        <span class="block text-2xl sm:text-4xl font-light tracking-tight text-white group-hover:text-zinc-300 transition-colors duration-300 border-b border-zinc-800 group-hover:border-white pb-2">
+                            hello@somekling.com
+                        </span>
+                    </a>
+                </div>
+
+                <div class="text-xs text-zinc-500 font-mono pt-4">
+                    Response within 24 business hours.
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
